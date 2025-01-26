@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Allow: /images/
+Sitemap: https://jemraymundo.github.io/cashbrew/sitemap.xml
