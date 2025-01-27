@@ -3,30 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CashBrew - Lending Business Tracker</title>
+    <title>CashBrew - Pautang Business Tracker</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVX1HZ4N1T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-QVX1HZ4N1T');
+    </script>
 
     <meta
       name="description"
-      content="CashBrew is the leading lending business tracker in the Philippines. Manage loans, automate interest calculations, and track payments for both personal and business lending. Simplify your pautang management with ease."
+      content="Manage your pautang and loans seamlessly with CashBrew. Track borrowers, calculate interest, and simplify your lending business with our all-in-one app."
     />
 
     <meta
       name="keywords"
-      content="lending business tracker, loan management, interest calculator, borrower management, CashBrew, pautang, utang business"
+      content="loan tracker, pautang management app, lending business management, utang tracker, pautang journal, loan monitoring, finance tracker, lending app, loan management system, lending software, lending tracker, money lending business, lending ledger app, loan calculator, loan record keeper, debt tracker, money lending app, finance tracker Philippines"
     />
+
     <meta name="author" content="CashBrew Team" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="CashBrew - Lending Business Tracker" />
-    <meta property="og:description" content="Track loans, calculate interest, and manage borrowers." />
+    <meta property="og:title" content="CashBrew - Pautang Business Tracker" />
+    <meta
+      property="og:description"
+      content="CashBrew is the easiest way to track loans, manage borrowers, and automate interest calculations. Try the best pautang tracker in PH today!"
+    />
+
     <meta property="og:image" content="https://www.cashbrew.app/cashbrew-banner.png" />
     <meta property="og:url" content="https://www.cashbrew.app" />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Meta -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="CashBrew - Lending Business Tracker" />
-    <meta name="twitter:description" content="Track loans, calculate interest, and manage borrowers with ease." />
+    <meta name="twitter:title" content="CashBrew - Pautang Business Tracker" />
+    <meta
+      name="twitter:description"
+      content="CashBrew is the easiest way to track loans, manage borrowers, and automate interest calculations. Try the best pautang tracker in PH today!"
+    />
     <meta name="twitter:image" content="https://www.cashbrew.app/cashbrew-banner.png" />
 
     <!-- Structured Data (Schema.org) -->
@@ -34,8 +53,8 @@
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "CashBrew - Lending Business Tracker",
-        "description": "Manage utang, loans, and pautang business easily with CashBrew.",
+        "name": "CashBrew - Loan Management and Tracking App",
+        "description": "Simplify your **pautang** and **loan tracking** with CashBrew. Track loans, calculate interest, and manage your borrowers."
         "operatingSystem": "iOS, Android",
         "applicationCategory": "FinanceApplication",
         "offers": {
@@ -52,38 +71,25 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Firebase SDK -->
-    <script type="module">
-      import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js';
-      import { getAnalytics, logEvent } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js';
-
-      const firebaseConfig = {
-        apiKey: 'AIzaSyAXbKTZ1MhYd1fYScAA6z07dh7MH55vH_M',
-        authDomain: 'cash-brew-prod.firebaseapp.com',
-        projectId: 'cash-brew-prod',
-        storageBucket: 'cash-brew-prod.firebasestorage.app',
-        messagingSenderId: '339659247541',
-        appId: '1:339659247541:web:8dfbe275176e0b137053fc',
-        measurementId: 'G-YNHPCZWSWK',
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-
-      // Ensure events are logged after DOM loads
-      window.onload = () => {
-        document.getElementById('android-link')?.addEventListener('click', () => {
-          logEvent(analytics, 'web_android_link_click');
-        });
-
-        document.getElementById('ios-link')?.addEventListener('click', () => {
-          logEvent(analytics, 'web_ios_link_click');
-        });
-      };
-    </script>
+    <!-- Facebook SDK -->
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"
+    ></script>
   </head>
   <body class="bg-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=G-QVX1HZ4N1T"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+
     <header class="absolute inset-x-0 top-0 z-50"></header>
     <div class="relative isolate px-6 pt-14 lg:px-8">
       <div
@@ -98,35 +104,42 @@
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div class="text-center">
           <h1 class="text-4xl font-bold tracking-tight text-[#0E9384] sm:text-6xl">
-            CashBrew - Lending & Loan Business Tracker
+            CashBrew - Pautang Business Tracker
           </h1>
 
           <p class="mt-6 text-lg leading-8 text-gray-600">
-            CashBrew is your all-in-one <strong>lending business tracker</strong>. Whether you're handling personal or
-            business loans, our app simplifies
-            <strong>loan tracking, borrower management, and interest calculations</strong>.
+            CashBrew is your all-in-one <strong>loan management tool</strong> for <strong>pautang businesses</strong>.
+            Whether you're managing personal or business loans, our app simplifies <strong>loan tracking</strong>,
+            borrower management, and interest calculations.
           </p>
 
           <div class="flex flex-row justify-center items-center gap-4 my-8">
             <a
-              id="android-link"
+              id="ios-link"
               href="https://apps.apple.com/ph/app/cashbrew/id6738322334"
               target="_blank"
               rel="noopener noreferrer"
               class="b-btn"
             >
-              <img src="images/app-store.png" alt="Download CashBrew from App Store" width="132" />
+              <img src="images/app-store.png" alt="Download the CashBrew loan tracker from the App Store" width="132" />
             </a>
             <a
-              id="ios-link"
+              id="android-link"
               href="https://play.google.com/store/apps/details?id=app.cashbrew"
               target="_blank"
               rel="noopener noreferrer"
               class="b-btn"
             >
-              <img src="images/google-play.png" alt="Get CashBrew on Google Play" width="148" />
+              <img
+                src="images/google-play.png"
+                alt="Download the CashBrew loan tracker from the Play Store"
+                width="148"
+              />
             </a>
           </div>
+
+          <!-- Facebook Share Button -->
+          <div class="fb-share-button" data-href="https://www.cashbrew.app" data-layout="button_count"></div>
         </div>
       </div>
 
