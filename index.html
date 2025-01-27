@@ -7,8 +7,9 @@
 
     <meta
       name="description"
-      content="CashBrew is the ultimate lending business tracker, designed to help lenders efficiently manage loans, calculate accurate interest, track payments, and organize borrower information all in one platform. Whether you're managing personal or business loans, CashBrew simplifies the process with automated features and user-friendly tools. Stay on top of your lending business and make informed decisions with detailed reports and reminders. Download CashBrew now from the App Store or Google Play and experience streamlined loan management at your fingertips!"
+      content="CashBrew is the leading lending business tracker in the Philippines. Manage loans, automate interest calculations, and track payments for both personal and business lending. Simplify your pautang management with ease."
     />
+
     <meta
       name="keywords"
       content="lending business tracker, loan management, interest calculator, borrower management, CashBrew, pautang, utang business"
@@ -33,7 +34,8 @@
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "CashBrew",
+        "name": "CashBrew - Lending Business Tracker",
+        "description": "Manage utang, loans, and pautang business easily with CashBrew.",
         "operatingSystem": "iOS, Android",
         "applicationCategory": "FinanceApplication",
         "offers": {
@@ -56,13 +58,13 @@
       import { getAnalytics, logEvent } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js';
 
       const firebaseConfig = {
-        apiKey: 'AIzaSyAmoDJiIpj0HrFMqJlFDst0rPeGJNo-vlg',
-        authDomain: 'cash-brew-dev.firebaseapp.com',
-        projectId: 'cash-brew-dev',
-        storageBucket: 'cash-brew-dev.appspot.com',
-        messagingSenderId: '783832709766',
-        appId: '1:783832709766:web:abd8ffa477aa2a521e2f07',
-        measurementId: 'G-BD9D0C8J00',
+        apiKey: 'AIzaSyAXbKTZ1MhYd1fYScAA6z07dh7MH55vH_M',
+        authDomain: 'cash-brew-prod.firebaseapp.com',
+        projectId: 'cash-brew-prod',
+        storageBucket: 'cash-brew-prod.firebasestorage.app',
+        messagingSenderId: '339659247541',
+        appId: '1:339659247541:web:8dfbe275176e0b137053fc',
+        measurementId: 'G-YNHPCZWSWK',
       };
 
       // Initialize Firebase
@@ -71,14 +73,12 @@
 
       // Ensure events are logged after DOM loads
       window.onload = () => {
-        logEvent(analytics, 'page_view');
-
         document.getElementById('android-link')?.addEventListener('click', () => {
-          logEvent(analytics, 'android_link_click');
+          logEvent(analytics, 'web_android_link_click');
         });
 
         document.getElementById('ios-link')?.addEventListener('click', () => {
-          logEvent(analytics, 'ios_link_click');
+          logEvent(analytics, 'web_ios_link_click');
         });
       };
     </script>
@@ -97,13 +97,14 @@
 
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div class="text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-[#0E9384] sm:text-6xl">CashBrew</h1>
-          <h2 class="text-opacity-80 font-semibold tracking-tight text-[#a1a8a7] sm:text-3xl">
-            Lending Business Tracker
-          </h2>
+          <h1 class="text-4xl font-bold tracking-tight text-[#0E9384] sm:text-6xl">
+            CashBrew - Lending & Loan Business Tracker
+          </h1>
+
           <p class="mt-6 text-lg leading-8 text-gray-600">
-            The smartest way to manage your lending business. Track loans, automate interest calculations, and stay on
-            top of collections. 💸
+            CashBrew is your all-in-one <strong>lending business tracker</strong>. Whether you're handling personal or
+            business loans, our app simplifies
+            <strong>loan tracking, borrower management, and interest calculations</strong>.
           </p>
 
           <div class="flex flex-row justify-center items-center gap-4 my-8">
