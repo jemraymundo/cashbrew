@@ -49,6 +49,39 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js';
+      import { getAnalytics, logEvent } from 'https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js';
+
+      const firebaseConfig = {
+        apiKey: 'AIzaSyAmoDJiIpj0HrFMqJlFDst0rPeGJNo-vlg',
+        authDomain: 'cash-brew-dev.firebaseapp.com',
+        projectId: 'cash-brew-dev',
+        storageBucket: 'cash-brew-dev.appspot.com',
+        messagingSenderId: '783832709766',
+        appId: '1:783832709766:web:abd8ffa477aa2a521e2f07',
+        measurementId: 'G-BD9D0C8J00',
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      // Ensure events are logged after DOM loads
+      window.onload = () => {
+        logEvent(analytics, 'page_view');
+
+        document.getElementById('android-link')?.addEventListener('click', () => {
+          logEvent(analytics, 'android_link_click');
+        });
+
+        document.getElementById('ios-link')?.addEventListener('click', () => {
+          logEvent(analytics, 'ios_link_click');
+        });
+      };
+    </script>
   </head>
   <body class="bg-white">
     <header class="absolute inset-x-0 top-0 z-50"></header>
@@ -75,6 +108,7 @@
 
           <div class="flex flex-row justify-center items-center gap-4 my-8">
             <a
+              id="android-link"
               href="https://apps.apple.com/ph/app/cashbrew/id6738322334"
               target="_blank"
               rel="noopener noreferrer"
@@ -83,6 +117,7 @@
               <img src="images/app-store.png" alt="Download CashBrew from App Store" width="132" />
             </a>
             <a
+              id="ios-link"
               href="https://play.google.com/store/apps/details?id=app.cashbrew"
               target="_blank"
               rel="noopener noreferrer"
