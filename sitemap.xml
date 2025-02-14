@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://www.cashbrew.app/</loc>
+        <lastmod>2025-02-06</lastmod>
+        <priority>1.0</priority>
+        <changefreq>daily</changefreq>
+        <image:image>
+            <image:loc>https://www.cashbrew.app/images/cashbrew-icon.webp</image:loc>
+            <image:title>CashBrew Icon</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.cashbrew.app/images/google-play.svg</image:loc>
+            <image:title>Download on Google Play</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.cashbrew.app/images/app-store.svg</image:loc>
+            <image:title>Download on the App Store</image:title>
+        </image:image>
+    </url>
 
-<url>
-  <loc>https://www.cashbrew.app/</loc>
-  <lastmod>2025-01-17T11:43:47+00:00</lastmod>
-</url>
-
-
+    <!-- 404 Page (Low Priority) -->
+    <url>
+        <loc>https://www.cashbrew.app/404.html</loc>
+        <priority>0.1</priority>
+        <changefreq>never</changefreq>
+    </url>
+    
 </urlset>

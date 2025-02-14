@@ -1,156 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CashBrew - Pautang Business Tracker</title>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+      <title>Pautang or Lending Business Tracker - CashBrew</title>
+      <link rel="canonical" href="https://www.cashbrew.app/" />
+      <link rel="stylesheet" href="assets/css/main.css" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVX1HZ4N1T"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-QVX1HZ4N1T');
-    </script>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVX1HZ4N1T"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() {
+           dataLayer.push(arguments);
+         }
+         gtag('js', new Date());
+         gtag('config', 'G-QVX1HZ4N1T');
+      </script>
 
-    <meta
-      name="description"
-      content="Manage your pautang and loans seamlessly with CashBrew. Track borrowers, calculate interest, and simplify your lending business with our all-in-one app."
-    />
-
-    <meta
-      name="keywords"
-      content="loan tracker, pautang management app, lending business management, utang tracker, pautang journal, loan monitoring, finance tracker, lending app, loan management system, lending software, lending tracker, money lending business, lending ledger app, loan calculator, loan record keeper, debt tracker, money lending app, finance tracker Philippines"
-    />
-
-    <meta name="author" content="CashBrew Team" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="CashBrew - Pautang Business Tracker" />
-    <meta
-      property="og:description"
-      content="CashBrew is the easiest way to track loans, manage borrowers, and automate interest calculations. Try the best pautang tracker in PH today!"
-    />
-
-    <meta property="og:image" content="https://www.cashbrew.app/cashbrew-banner.png" />
-    <meta property="og:url" content="https://www.cashbrew.app" />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitter Meta -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="CashBrew - Pautang Business Tracker" />
-    <meta
-      name="twitter:description"
-      content="CashBrew is the easiest way to track loans, manage borrowers, and automate interest calculations. Try the best pautang tracker in PH today!"
-    />
-    <meta name="twitter:image" content="https://www.cashbrew.app/cashbrew-banner.png" />
-
-    <!-- Structured Data (Schema.org) -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "CashBrew - Loan Management and Tracking App",
-        "description": "Simplify your **pautang** and **loan tracking** with CashBrew. Track loans, calculate interest, and manage your borrowers."
-        "operatingSystem": "iOS, Android",
-        "applicationCategory": "FinanceApplication",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "PHP"
-        }
-      }
-    </script>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="cashbrew-icon.webp" />
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Facebook SDK -->
-    <script
-      async
-      defer
-      crossorigin="anonymous"
-      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"
-    ></script>
-  </head>
-  <body class="bg-white">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=G-QVX1HZ4N1T"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
-
-    <header class="absolute inset-x-0 top-0 z-50"></header>
-    <div class="relative isolate px-6 pt-14 lg:px-8">
-      <div
-        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        aria-hidden="true"
-      >
-        <div
-          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#0E9384] to-[#98A2B3] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-        ></div>
+      <meta
+         name="description"
+         content="Manage your pautang and loans seamlessly with CashBrew. Track borrowers, calculate interest, and simplify your lending business with our all-in-one app."
+         />
+      <meta
+         name="keywords"
+         content="loan tracker, pautang management app, lending business management, utang tracker, pautang journal, loan monitoring, finance tracker, lending app, loan management system, lending software, lending tracker, money lending business, lending ledger app, loan calculator, loan record keeper, debt tracker, money lending app, finance tracker Philippines"
+         />
+      <meta name="author" content="CashBrew Team" />
+      <meta property="og:site_name" content="CashBrew" />
+      <!-- Open Graph / Facebook -->
+      <meta property="og:title" content="Pautang Business Tracker" />
+      <meta
+         property="og:description"
+         content="CashBrew is the easiest way to track loans, manage borrowers, and automate interest calculations. Try the best pautang tracker in PH today!"
+         />
+      <meta property="og:image" content="images/cashbrew-banner.png" />
+      <meta property="og:url" content="https://www.cashbrew.app" />
+      <meta property="og:type" content="website" />
+      <!-- Twitter Meta -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="CashBrew - Pautang Business Tracker" />
+      <meta
+         name="twitter:description"
+         content="CashBrew is the easiest way to track loans, manage borrowers, and automate interest calculations. Try the best pautang tracker in PH today!"
+         />
+      <meta name="twitter:image" content="images/cashbrew-banner.png" />
+      <!-- Favicon -->
+      <link rel="icon" type="image/x-icon" href="images/cashbrew-icon.webp" />
+      <!-- Facebook SDK -->
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"></script>
+   </head>
+   <body class="landing is-preload">
+      <!-- Google Tag Manager (noscript) -->
+      <noscript>
+         <iframe
+            src="https://www.googletagmanager.com/ns.html?id=G-QVX1HZ4N1T"
+            height="0"
+            width="0"
+            style="display: none; visibility: hidden"
+            ></iframe>
+      </noscript>
+      <div id="page-wrapper">
+         <header id="header" class="alt">
+            <h1><a href="index.html">CashBrew - Pautang Business Tracker</a></h1>
+            <nav id="nav">
+              <ul>
+                <li class="special">
+                  <a href="#menu" class="menuToggle"><span>Menu</span></a>
+                </li>
+              </ul>
+            </nav>
+            
+            <!-- Move the menu div outside the <ul> -->
+            <div id="menu">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+              </ul>
+            </div>
+            
+         </header>
+         <section id="banner">
+            <div class="inner">
+               <h2>CashBrew</h2>
+               <p>Your all-in-one <strong>loan management tool</strong> for <strong>pautang business</strong></p>
+               <ul class="actions special">
+                  <li>
+                     <a id="ios-link"
+                        href="https://apps.apple.com/ph/app/cashbrew/id6738322334"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="b-btn"
+                        >
+                     <img src="images/app-store.png" alt="Download the CashBrew loan tracker from the App Store" width="132"  height="44" loading="lazy"/>
+                     </a>
+                  </li>
+                  <li>
+                     <a
+                        id="android-link"
+                        href="https://play.google.com/store/apps/details?id=app.cashbrew"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="b-btn"
+                        >
+                     <img
+                        src="images/google-play.png"
+                        alt="Download the CashBrew loan tracker from the Play Store"
+                        width="132" height="44"
+                     loading="lazy"
+                        />
+                  </li>
+               </ul>
+            </div>
+            <a href="#two" class="more scrolly">Learn More</a>
+         </section>
+         <section id="two" class="wrapper alt style2">
+            <section class="spotlight">
+               <div class="image"><img src="images/loan-management.jpg" alt="Loan Management" /></div>
+               <div class="content">
+                  <h2>Loan Management</h2>
+                  <p>Effortlessly track and manage your loans—create, update, or remove loans with ease.</p>
+               </div>
+            </section>
+            <section class="spotlight">
+               <div class="image"><img src="images/payment-tracking.jpg" alt="Payment Tracking" /></div>
+               <div class="content">
+                <h2>Payment Tracking</h2>
+                <p>Track payments, interest rates, and repayment schedules with detailed records for each transaction.</p>
+               </div>
+            </section>
+            <section class="spotlight">
+               <div class="image"><img src="images/loan-business-report.jpg" alt=" Loan Business Report" /></div>
+               <div class="content">
+                  <h2>Loan Business Report</h2>
+                  <p>Track your interest earned, principal amount, total new loans, and other key metrics in one place. Gain insights to optimize your lending strategy and grow your business efficiently.</p>
+               </div>
+            </section>
+         </section>
+         <section id="three" class="wrapper style3 special">
+            <div class="inner">
+               <header class="major">
+                  <h2>Time to Scale Your Lending Business</h2>
+                  <p>
+                     With CashBrew, managing loans and repayments is simple and effective. </br>Start optimizing your
+                     financial solutions now.
+                  </p>
+               </header>
+               <ul class="features">
+                  <li class="icon solid fa-money-bill">
+                     <h3>Track Any Loan Amount</h3>
+                     <p>No matter the loan size, CashBrew makes it easy to track.</p>
+                  </li>
+                  <li class="icon solid fa-briefcase">
+                     <h3>Build Stronger Portfolios</h3>
+                     <p>Diversify your loans and optimize returns by managing multiple borrowers.</p>
+                  </li>
+                  <li class="icon solid fa-sliders-h">
+                     <h3>Easy Loan Type Tracking</h3>
+                     <p>Track different loan types like Fixed, Simple Interest, or Interest Only with ease.</p>
+                  </li>
+                  <li class="icon solid fa-chart-line">
+                     <h3>Detailed Reports</h3>
+                     <p>Generate insightful reports on earnings, payments, and borrower behavior.</p>
+                  </li>
+                  <li class="icon solid fa-lock">
+                     <h3>Secure and Confidential</h3>
+                     <p>Your data is protected with advanced security measures to ensure privacy.</p>
+                  </li>
+                  <li class="icon solid fa-history">
+                     <h3>Payment History Overview</h3>
+                     <p>Keep track of past and current payments to ensure full transparency.</p>
+                  </li>
+               </ul>
+            </div>
+         </section>
+         <section class="wrapper style5">
+            <div class="inner">
+               <header>
+                  <h2>Pricing Plans</h2>
+                  <p>Select a plan that suits your needs and start using CashBrew today.</p>
+               </header>
+               <div class="row">
+                  <div class="col-4 col-12-medium">
+                     <section class="box pricing-box">
+                        <h3>Free</h3>
+                        <p>Basic features to get you started.</p>
+                        <ul class="alt">
+                           <li>✔ Access to essential tools</li>
+                           <li>✔ 15 Active Loans</li>
+                           <li>✖ No premium support</li>
+                        </ul>
+                        <a href="https://www.codebrew.co/" class="button primary fit">Get Started</a>
+                     </section>
+                  </div>
+                  <div class="col-4 col-12-medium">
+                     <section class="box pricing-box">
+                        <h3>Premium</h3>
+                        <p>Perfect for small teams and individuals.</p>
+                        <ul class="alt">
+                           <li>✔ Access to essential tools</li>
+                           <li>✔ 50 Active Loans</li>
+                           <li>✔ Priority support</li>
+                        </ul>
+                        <a href="https://www.codebrew.co/" class="button fit">Upgrade</a>
+                     </section>
+                  </div>
+                  <div class="col-4 col-12-medium">
+                     <section class="box pricing-box vip-box">
+                        <h3>VIP</h3>
+                        <p>Ideal for businesses and power users.</p>
+                        <ul class="alt">
+                           <li>✔ Access to essential tools</li>
+                           <li>✔ 100 Active Loans</li>
+                           <li>✔ Priority support</li>
+                        </ul>
+                        <a href="https://www.codebrew.co/" class="button fit">Go VIP</a>
+                     </section>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="download" class="wrapper style4 special">
+            <div class="inner">
+               <header class="major">
+                  <h2>Download CashBrew Now!</h2>
+                  <p>Get started with CashBrew today and take control of your lending business!</p>
+               </header>
+               <ul class="actions special">
+                  <li>
+                     <a id="ios-link"
+                        href="https://apps.apple.com/ph/app/cashbrew/id6738322334"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="b-btn"
+                        >
+                     <img src="images/app-store.png" alt="Download the CashBrew loan tracker from the App Store" width="132 loading="lazy"/>
+                     </a>
+                  </li>
+                  <li>
+                     <a
+                        id="android-link"
+                        href="https://play.google.com/store/apps/details?id=app.cashbrew"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="b-btn"
+                        >
+                        <img
+                           src="images/google-play.png"
+                           alt="Download the CashBrew loan tracker from the App Store" width="132" height="44" loading="lazy"
+                           />
+                  </li>
+               </ul>
+            </div>
+         </section>
+         <footer id="footer">
+         <ul class="icons">
+         <li>
+         <a href="https://www.facebook.com/profile.php?id=61568682093637" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+         </li>
+         <li>
+         <a href="https://www.codebrew.co/contact" class="icon solid fa-envelope"><span class="label">Email</span></a>
+         </li>
+         </ul>
+         <ul class="copyright">
+         <li>&copy; CashBrew</li>
+         <li>Product of: <strong><a href="https://www.codebrew.co">Codebrew</a></strong></li>
+         </ul>
+         </footer>
       </div>
-
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div class="text-center">
-          <h1 class="text-4xl font-bold tracking-tight text-[#0E9384] sm:text-6xl">
-            CashBrew - Pautang Business Tracker
-          </h1>
-
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            CashBrew is your all-in-one <strong>loan management tool</strong> for <strong>pautang businesses</strong>.
-            Whether you're managing personal or business loans, our app simplifies <strong>loan tracking</strong>,
-            borrower management, and interest calculations.
-          </p>
-
-          <div class="flex flex-row justify-center items-center gap-4 my-8">
-            <a
-              id="ios-link"
-              href="https://apps.apple.com/ph/app/cashbrew/id6738322334"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="b-btn"
-            >
-              <img src="images/app-store.png" alt="Download the CashBrew loan tracker from the App Store" width="132" />
-            </a>
-            <a
-              id="android-link"
-              href="https://play.google.com/store/apps/details?id=app.cashbrew"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="b-btn"
-            >
-              <img
-                src="images/google-play.png"
-                alt="Download the CashBrew loan tracker from the Play Store"
-                width="148"
-              />
-            </a>
-          </div>
-
-          <!-- Facebook Share Button -->
-          <div class="fb-share-button" data-href="https://www.cashbrew.app" data-layout="button_count"></div>
-        </div>
-      </div>
-
-      <div
-        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-        aria-hidden="true"
-      >
-        <div
-          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#0E9384] to-[#98A2B3] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-        ></div>
-      </div>
-    </div>
-  </body>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/jquery.scrolly.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
 </html>

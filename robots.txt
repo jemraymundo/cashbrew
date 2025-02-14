@@ -1,2 +1,11 @@
 User-agent: *
+Disallow: /assets/
+Disallow: /images/
+Disallow: /404.html
+Disallow: /admin/
+Disallow: /login/
+
+Allow: /images/google-play.svg
+Allow: /images/app-store.svg
+
 Sitemap: https://www.cashbrew.app/sitemap.xml
