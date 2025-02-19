@@ -302,7 +302,7 @@ h6 {
   font-weight: 800;
   letter-spacing: 0.225em;
   line-height: 1em;
-  margin: 0 0 1em;
+  margin: 0 0 0.5em;
   text-transform: uppercase;
 }
 label,
@@ -1811,7 +1811,7 @@ button.primary,
 input[type='button'].primary,
 input[type='reset'].primary,
 input[type='submit'].primary {
-  background-color: #ed4933;
+  background-color: #0e9384;
   box-shadow: none !important;
   color: #fff !important;
 }
@@ -1820,7 +1820,7 @@ button.primary:hover,
 input[type='button'].primary:hover,
 input[type='reset'].primary:hover,
 input[type='submit'].primary:hover {
-  background-color: #ef5e4a !important;
+  background-color: #13af9a !important;
 }
 .button.primary:active,
 button.primary:active,

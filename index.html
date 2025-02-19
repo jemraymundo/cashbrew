@@ -3,10 +3,33 @@
    <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-      <title>Pautang or Lending Business Tracker - CashBrew</title>
+      <title>Pautang Business Tracker - CashBrew</title>
       <link rel="canonical" href="https://www.cashbrew.app/" />
       <link rel="stylesheet" href="assets/css/main.css" />
 
+             <!-- CSS for Toggle Buttons -->
+             <style>
+               .pricing-toggle {
+                   text-align: center;
+                   margin-bottom: 20px;
+               }
+           
+               .toggle-btn {
+                   background: #ddd;
+                   border: none;
+                   padding: 10px 20px;
+                   cursor: pointer;
+                   font-size: 16px;
+                   margin: 5px;
+                   border-radius: 5px;
+               }
+           
+               .toggle-btn.active {
+                   background: #007bff;
+                   color: #fff;
+                   font-weight: bold;
+               }
+           </style>
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVX1HZ4N1T"></script>
       <script>
@@ -190,50 +213,94 @@
          </section>
          <section class="wrapper style5">
             <div class="inner">
-               <header>
-                  <h2>Pricing Plans</h2>
-                  <p>Select a plan that suits your needs and start using CashBrew today.</p>
-               </header>
-               <div class="row">
-                  <div class="col-4 col-12-medium">
-                     <section class="box pricing-box">
-                        <h3>Free</h3>
-                        <p>Basic features to get you started.</p>
-                        <ul class="alt">
-                           <li>✔ Access to essential tools</li>
-                           <li>✔ 15 Active Loans</li>
-                           <li>✖ No premium support</li>
-                        </ul>
-                        <a href="https://www.codebrew.co/" class="button primary fit">Get Started</a>
-                     </section>
-                  </div>
-                  <div class="col-4 col-12-medium">
-                     <section class="box pricing-box">
-                        <h3>Premium</h3>
-                        <p>Perfect for small teams and individuals.</p>
-                        <ul class="alt">
-                           <li>✔ Access to essential tools</li>
-                           <li>✔ 50 Active Loans</li>
-                           <li>✔ Priority support</li>
-                        </ul>
-                        <a href="https://www.codebrew.co/" class="button fit">Upgrade</a>
-                     </section>
-                  </div>
-                  <div class="col-4 col-12-medium">
-                     <section class="box pricing-box vip-box">
-                        <h3>VIP</h3>
-                        <p>Ideal for businesses and power users.</p>
-                        <ul class="alt">
-                           <li>✔ Access to essential tools</li>
-                           <li>✔ 100 Active Loans</li>
-                           <li>✔ Priority support</li>
-                        </ul>
-                        <a href="https://www.codebrew.co/" class="button fit">Go VIP</a>
-                     </section>
-                  </div>
-               </div>
+                <header>
+                    <h2>Pricing Plans</h2>
+                    <p>Select a plan that suits your needs and start using CashBrew today.</p>
+                </header>
+        
+                <!-- Toggle Buttons -->
+                <div class="pricing-toggle">
+                  <a id="monthly-btn" class="button secondary small">Monthly</a>
+                  <a id="yearly-btn" class="button primary small">Yearly</a>
+                  
+                </div>
+        
+                <div class="row">
+                    <div class="col-4 col-12-medium">
+                        <section class="box pricing-box">
+                            <h3>Free</h3>
+                            <p>Basic features to get you started.</p>
+                            <h4 class="price">₱0 / <span class="billing-cycle">month</span></h4>
+                            <ul class="alt">
+                                <li>✔ Access to essential tools</li>
+                                <li>✔ 15 Active Loans</li>
+                                <li>✖ No premium support</li>
+                            </ul>
+                            <a href="https://www.codebrew.co/" class="button primary fit">Get Started</a>
+                        </section>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <section class="box pricing-box">
+                            <h3>Premium</h3>
+                            <p>Perfect for small teams and individuals.</p>
+                            <h4 class="price">₱35 / <span class="billing-cycle">month</span></h4>
+                            <ul class="alt">
+                                <li>✔ Access to essential tools</li>
+                                <li>✔ 50 Active Loans</li>
+                                <li>✔ Priority support</li>
+                            </ul>
+                            <a href="https://www.codebrew.co/" class="button fit">Upgrade</a>
+                        </section>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <section class="box pricing-box vip-box">
+                            <h3>VIP</h3>
+                            <p>Ideal for businesses and power users.</p>
+                            <h3 class="price">₱75 / <span class="billing-cycle">month</span></h3>
+                            <ul class="alt">
+                                <li>✔ Access to essential tools</li>
+                                <li>✔ 100 Active Loans</li>
+                                <li>✔ Priority support</li>
+                            </ul>
+                            <a href="https://www.codebrew.co/" class="button fit">Go VIP</a>
+                        </section>
+                    </div>
+                </div>
             </div>
-         </section>
+        </section>
+        
+        <!-- JavaScript for Pricing Toggle -->
+        <script>
+            document.getElementById('monthly-btn').addEventListener('click', function() {
+                updatePricing('monthly');
+            });
+        
+            document.getElementById('yearly-btn').addEventListener('click', function() {
+                updatePricing('yearly');
+            });
+        
+            function updatePricing(plan) {
+                const prices = document.querySelectorAll('.price');
+                const billingCycles = document.querySelectorAll('.billing-cycle');
+                
+                if (plan === 'yearly') {
+                    prices[0].innerHTML = '₱0 / <span class="billing-cycle">year</span>'; // Free stays at 0
+                    prices[1].innerHTML = '₱350 / <span class="billing-cycle">year</span>'; // Premium
+                    prices[2].innerHTML = '₱750 / <span class="billing-cycle">year</span>'; // VIP
+                } else {
+                    prices[0].innerHTML = '₱0 / <span class="billing-cycle">month</span>';
+                    prices[1].innerHTML = '₱35 / <span class="billing-cycle">month</span>';
+                    prices[2].innerHTML = '₱75 / <span class="billing-cycle">month</span>';
+                }
+        
+                // Toggle active class for buttons
+                document.getElementById('monthly-btn').classList.toggle('active', plan === 'monthly');
+                document.getElementById('yearly-btn').classList.toggle('active', plan === 'yearly');
+            }
+        </script>
+        
+ 
+        
          <section id="download" class="wrapper style4 special">
             <div class="inner">
                <header class="major">
